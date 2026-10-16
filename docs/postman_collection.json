@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "AI Cybersecurity Threat Detection API",
+    "description": "Tests all endpoints of the Cybersecurity Threat Detection REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/health"
+      }
+    },
+    {
+      "name": "Predict - Doc Sample (Brute Force)",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"packet_size\": 1500, \"failed_logins\": 5, \"request_frequency\": 250}"}
+      }
+    },
+    {
+      "name": "Predict - Normal Traffic",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"packet_size\": 520, \"failed_logins\": 0, \"request_frequency\": 18}"}
+      }
+    },
+    {
+      "name": "Predict - DoS SYN Flood",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"packet_size\": 1450, \"failed_logins\": 0, \"request_frequency\": 1200}"}
+      }
+    },
+    {
+      "name": "Predict - Invalid (Missing Fields)",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"packet_size\": 1000}"}
+      }
+    },
+    {
+      "name": "Predict Batch",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict_batch",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "[{\"packet_size\":500,\"failed_logins\":0,\"request_frequency\":20},{\"packet_size\":1400,\"failed_logins\":10,\"request_frequency\":300}]"}
+      }
+    },
+    {
+      "name": "Predict Phishing URL",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict_phishing",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"url_length\": 115, \"has_ip_in_url\": 1, \"num_special_chars\": 14, \"https_flag\": 0, \"domain_age_days\": 12, \"num_redirects\": 3, \"suspicious_keywords\": 2}"}
+      }
+    },
+    {
+      "name": "Predict Malware Behaviour",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/predict_malware",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"api_call_count\": 920, \"registry_changes\": 22, \"files_modified\": 58, \"network_connections\": 18, \"entropy\": 7.4, \"memory_usage_mb\": 280, \"execution_time_sec\": 8.5}"}
+      }
+    },
+    {
+      "name": "Get Recent Alerts",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/alerts?limit=20"
+      }
+    },
+    {
+      "name": "Get Model Metrics",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/metrics"
+      }
+    },
+    {
+      "name": "SOC Dashboard",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/dashboard"
+      }
+    }
+  ]
+}

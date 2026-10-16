@@ -1,0 +1,20 @@
+[2026-10-16 16:48:15] [INFO] [threat_detection]: Generating 2000 synthetic network traffic records (Seed=42)...
+[2026-10-16 16:48:15] [INFO] [threat_detection]: Generated network dataset with shape (2004, 17).
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Generating 1000 synthetic network traffic records (Seed=42)...
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Generated network dataset with shape (1002, 17).
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Cleaning raw data. Initial shape: (1002, 17)
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Removed 2 duplicate records.
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Cleaning completed. Cleaned shape: (1000, 18)
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Cleaning raw data. Initial shape: (1002, 17)
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Removed 2 duplicate records.
+[2026-10-16 16:48:19] [INFO] [threat_detection]: Cleaning completed. Cleaned shape: (1000, 18)
+[2026-10-16 16:48:22] [INFO] [threat_detection]: Generating 2000 synthetic network traffic records (Seed=42)...
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Generated network dataset with shape (2004, 17).
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Cleaning raw data. Initial shape: (2004, 17)
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Removed 4 duplicate records.
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Cleaning completed. Cleaned shape: (2000, 18)
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Training Deployment Model (3 features: packet_size, failed_logins, request_frequency)...
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Deployment Model Test Metrics: {'accuracy': 0.985, 'precision': 0.9851, 'recall': 0.985, 'f1': 0.9849, 'roc_auc': 0.9861}
+[2026-10-16 16:48:23] [INFO] [threat_detection]: Training baseline Logistic Regression model...
+[2026-10-16 16:48:25] [INFO] [threat_detection]: Logistic Regression Test Metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc': 1.0}
+[2026-10-16 16:48:30] [INFO] [threat_detection]: ThreatDetector initialized with available model artifacts.
