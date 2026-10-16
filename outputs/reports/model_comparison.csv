@@ -1,0 +1,7 @@
+Model,accuracy,precision,recall,f1,roc_auc
+Deployment Random Forest (3-Feature),0.9817,0.9817,0.9817,0.9817,0.9955
+Full Multi-Class Random Forest,0.9999,0.9999,0.9999,0.9999,1.0
+Logistic Regression (Baseline),0.9997,0.9997,0.9997,0.9997,1.0
+Isolation Forest (Anomaly Detector),0.9248,0.9342,0.9248,0.9269,
+Phishing Detector (URL Telemetry),1.0,1.0,1.0,1.0,1.0
+Malware Detector (Host Telemetry),1.0,1.0,1.0,1.0,1.0

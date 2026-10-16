@@ -1,0 +1,57 @@
+{
+  "brute_force": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 495.0
+  },
+  "dos": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 822.0
+  },
+  "malware": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 342.0
+  },
+  "normal": {
+    "precision": 1.0,
+    "recall": 0.999872040946897,
+    "f1-score": 0.9999360163798068,
+    "support": 7815.0
+  },
+  "phishing": {
+    "precision": 0.9969230769230769,
+    "recall": 1.0,
+    "f1-score": 0.9984591679506933,
+    "support": 324.0
+  },
+  "port_scan": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 426.0
+  },
+  "unauthorized_access": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 176.0
+  },
+  "accuracy": 0.9999038461538462,
+  "macro avg": {
+    "precision": 0.9995604395604395,
+    "recall": 0.9999817201352711,
+    "f1-score": 0.9997707406186428,
+    "support": 10400.0
+  },
+  "weighted avg": {
+    "precision": 0.9999041420118342,
+    "recall": 0.9999038461538462,
+    "f1-score": 0.9999039171561744,
+    "support": 10400.0
+  }
+}
